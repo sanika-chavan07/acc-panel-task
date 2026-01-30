@@ -1,0 +1,36 @@
+.accpanel h4{
+    margin: 0;
+    padding: 10px;
+    background-color:black;
+    color: #ffff;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    position: relative;
+
+
+}
+h4.acHead::before{
+    content: "+";
+    position: absolute;
+    right: 5px;
+    top:8px
+}
+h4.acHead.active::before{
+    content: "-";
+}
+.accpanel h4:is(:active,:focus,:hover){
+    background-color: orange;
+}
+.accpanel p{
+    margin: 0;
+    border: 2px solid;
+    padding: 15px;
+    display: none;
+
+}
+.accpanel h4.active{
+    background-color: orange;
+}
+.accpanel h4.active + p{
+    display: block;
+}
